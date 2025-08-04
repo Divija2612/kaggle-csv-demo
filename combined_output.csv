@@ -1,5 +1,4 @@
-Age	Gender	Avg_Daily_Screen_Time_hr	Primary_Device	Exceeded_Recommended_Limit	Educational_to_Recreational_Ratio	Health_Impacts	Urban_or_Rural,Age,Gender,Avg_Daily_Screen_Time_hr,Primary_Device,Exceeded_Recommended_Limit,Educational_to_Recreational_Ratio,Health_Impacts,Urban_or_Rural
-,14.0,Male,3.99,Smartphone,True,0.42,"Poor Sleep, Eye Strain",Urban
+Age	Gender	Avg_Daily_Screen_Time_hr	Primary_Device	Exceeded_Recommended_Limit	Educational_to_Recreational_Ratio	Health_Impacts	Urban_or_Rural
 ,11.0,Female,4.61,Laptop,True,0.3,Poor Sleep,Urban
 ,18.0,Female,3.73,TV,True,0.32,Poor Sleep,Urban
 ,15.0,Female,1.21,Laptop,False,0.39,,Urban
