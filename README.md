@@ -1,2 +1,2 @@
 # kaggle-csv-demo
-CSV datasets for testing data analysis using Power BI
+Creating a visual small dashboard of a CSV dataset using Power BI
