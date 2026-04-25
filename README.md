@@ -4,19 +4,6 @@ A lightweight data analysis and visualization project that loads a combined Kagg
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Files in this Repo](#files-in-this-repo)
-- [Dataset](#dataset)
-- [Dashboard Highlights](#dashboard-highlights)
-- [Getting Started](#getting-started)
-- [How the Data Was Prepared](#how-the-data-was-prepared)
-- [Tools Used](#tools-used)
-- [Future Improvements](#future-improvements)
-
----
-
 ## Overview
 
 This project demonstrates an end-to-end data analytics workflow:
@@ -24,7 +11,7 @@ This project demonstrates an end-to-end data analytics workflow:
 1. Source a public CSV dataset from Kaggle
 2. Clean and combine the raw data into a single flat file (`combined_output.csv`)
 3. Load it into Power BI Desktop
-4. Build an interactive dashboard with charts, KPI cards, and filters
+4. Build an interactive dashboard with charts and filters
 5. Export the visuals as a shareable PDF
 
 It serves as a quick reference for anyone learning Power BI or looking for a minimal working example of CSV → dashboard.
@@ -42,16 +29,6 @@ It serves as a quick reference for anyone learning Power BI or looking for a min
 
 ---
 
-## Dataset
-
-- **Source:** Kaggle (public dataset)
-- **File:** `combined_output.csv`
-- **Format:** Comma-separated values, UTF-8 encoded
-
-> Update this section with the specific Kaggle dataset name/link, e.g.:
-> _Dataset: [Kaggle — Sample Sales Data](https://www.kaggle.com/datasets/...)_
-
----
 
 ## Dashboard Highlights
 
@@ -99,10 +76,6 @@ Open `data_visuals (2).pdf` directly in any PDF viewer — no Power BI needed.
    - Removed null / duplicate rows
    - Standardised column names (no spaces, consistent casing)
    - Set correct data types (dates, numbers, text)
-4. **Modelled** relationships between tables (if multiple tables were used).
-5. **Authored DAX measures** for calculated KPIs.
-
-> If you used a Python script to merge the CSVs, drop it in a `scripts/` folder and link it here.
 
 ---
 
@@ -117,16 +90,3 @@ Open `data_visuals (2).pdf` directly in any PDF viewer — no Power BI needed.
 
 ---
 
-## Future Improvements
-
-- [ ] Add the original Kaggle dataset link and description
-- [ ] Include a Python/Pandas pre-processing script for reproducibility
-- [ ] Publish the report to Power BI Service for live web access
-- [ ] Add a `screenshots/` folder with dashboard preview images for the README
-- [ ] Parameterise the data source path so the `.pbix` works out of the box on any machine
-
----
-
-## License
-
-This project is open-source under the [MIT License](LICENSE). The dataset belongs to its original Kaggle author — check the source for its specific licence.
