@@ -1,46 +1,104 @@
-# Kaggle CSV Demo — Power BI Dashboard 📊
+# Screen Time Analytics Dashboard 📊
 
-A lightweight data analysis and visualization project that loads a combined Kaggle CSV dataset into **Power BI** and produces an interactive dashboard. The repo includes the raw data, the `.pbix` workbook, and a PDF export of the finished visuals.
+A data analytics project that combines **Python (Pandas & Matplotlib)** and **Power BI** to clean, analyze, and visualize screen-time behavior data sourced from Kaggle.
+
+The project demonstrates an end-to-end analytics workflow, from raw data preprocessing to dashboard creation and reporting.
 
 ---
 
 ## Overview
 
-This project demonstrates an end-to-end data analytics workflow:
+This project follows a complete data analytics pipeline:
 
-1. Source a public CSV dataset from Kaggle
-2. Clean and combine the raw data into a single flat file (`combined_output.csv`)
-3. Load it into Power BI Desktop
-4. Build an interactive dashboard with charts and filters
-5. Export the visuals as a shareable PDF
-
-It serves as a quick reference for anyone learning Power BI or looking for a minimal working example of CSV → dashboard.
-
----
-
-## Files in this Repo
-
-| File | Description |
-|------|-------------|
-| `combined_output.csv` | Cleaned and merged dataset ready for analysis |
-| `data_visuals.pbix` | Power BI Desktop workbook (all visuals, relationships, and DAX measures) |
-| `data_visuals (2).pdf` | Static PDF export of the completed dashboard |
-| `README.md` | This file |
+1. Collect data from a public Kaggle dataset
+2. Clean and preprocess the data using Python and Pandas
+3. Handle missing values and duplicate records
+4. Perform exploratory data analysis (EDA)
+5. Create visualizations using Matplotlib
+6. Import the cleaned dataset into Power BI
+7. Build an interactive dashboard for deeper analysis
 
 ---
 
+## Files in this Repository
 
-## Dashboard Highlights
+| File                      | Description                                  |
+| ------------------------- | -------------------------------------------- |
+| `combined_output.csv`     | Dataset used for analysis                    |
+| `screen_time_analysis.py` | Python script for cleaning and visualization |
+| `data_visuals.pbix`       | Power BI dashboard                           |
+| `data_visuals (2).pdf`    | PDF export of the dashboard                  |
+| `README.md`               | Project documentation                        |
 
-The Power BI report (`data_visuals.pbix`) includes:
+---
 
-- **KPI Cards** — top-line summary metrics at a glance
-- **Bar / Column Charts** — category-level breakdowns
-- **Line Charts** — trend analysis over time (if the dataset contains dates)
-- **Slicers / Filters** — interactive filtering by key dimensions
-- **Data Table** — drill-down view of the underlying records
+## Data Cleaning Process
 
-A static snapshot of every page is available in `data_visuals (2).pdf` — no Power BI licence needed to view it.
+The dataset was cleaned using Pandas by:
+
+* Removing duplicate records
+* Removing completely empty rows
+* Filling missing numerical values using the median
+* Filling missing categorical values using the mode
+* Verifying and validating data quality
+
+Example:
+
+```python
+df = df.drop_duplicates()
+df = df.dropna(how='all')
+```
+
+---
+
+## Exploratory Data Analysis (Matplotlib)
+
+The following visualizations were generated using Matplotlib:
+
+### 1. Age Distribution
+
+Analyzes the age demographics of participants.
+
+### 2. Gender Distribution
+
+Shows the distribution of users by gender.
+
+### 3. Average Daily Screen Time by Gender
+
+Compares average screen-time habits across genders.
+
+### 4. Primary Device Usage
+
+Identifies the most commonly used devices.
+
+### 5. Urban vs Rural Distribution
+
+Examines demographic differences between urban and rural users.
+
+### 6. Health Impacts Analysis
+
+Highlights the frequency of reported health impacts associated with screen usage.
+
+---
+
+## Power BI Dashboard
+
+The cleaned dataset was imported into Power BI to create an interactive dashboard featuring:
+
+* **KPI Cards** for key summary metrics
+* **Bar Charts** for demographic and device analysis
+* **Pie Charts** for category distribution
+* **Interactive Filters and Slicers**
+* **Comparative Visualizations** across user groups
+* **Data Tables** for detailed record inspection
+
+The dashboard allows users to explore relationships between screen time, demographics, device usage, and health impacts.
+
+A static version of the dashboard is available in:
+
+```text
+data_visuals (2).pdf
+```
 
 ---
 
@@ -48,45 +106,59 @@ A static snapshot of every page is available in `data_visuals (2).pdf` — no Po
 
 ### Prerequisites
 
-- [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free) — Windows only
-- No Python, no packages, no environment setup required
+Install Python dependencies:
 
-### Open the Dashboard
+```bash
+pip install pandas matplotlib
+```
 
-1. Clone or download this repository:
-   ```bash
-   git clone https://github.com/Divija2612/kaggle-csv-demo.git
-   ```
-2. Open **Power BI Desktop**.
-3. Go to **File → Open report** and select `data_visuals.pbix`.
-4. If prompted about the data source path, go to **Transform Data → Data Source Settings** and update the path to `combined_output.csv` on your machine.
-5. Click **Refresh** to reload the data.
+For dashboard exploration:
 
-### Just want to see the visuals?
+* Power BI Desktop (free)
 
-Open `data_visuals (2).pdf` directly in any PDF viewer — no Power BI needed.
+### Run the Python Analysis
 
----
+```bash
+python screen_time_analysis.py
+```
 
-## How the Data Was Prepared
+### Open the Power BI Dashboard
 
-1. **Downloaded** raw CSV file(s) from Kaggle.
-2. **Combined** multiple files (if applicable) into `combined_output.csv`.
-3. **Cleaned** in Power BI's Power Query Editor:
-   - Removed null / duplicate rows
-   - Standardised column names (no spaces, consistent casing)
-   - Set correct data types (dates, numbers, text)
+1. Open `data_visuals.pbix` in Power BI Desktop.
+2. Refresh the data source if prompted.
+3. Interact with filters, charts, and KPI cards.
 
 ---
 
-## Tools Used
+## Technologies Used
 
-| Tool | Purpose |
-|------|---------|
-| Power BI Desktop | Dashboard authoring, DAX, Power Query |
-| Microsoft Excel / Python (optional) | Data pre-processing / CSV merging |
-| Kaggle | Dataset source |
-| Git / GitHub | Version control and sharing |
+| Tool             | Purpose                           |
+| ---------------- | --------------------------------- |
+| Python           | Data processing and analysis      |
+| Pandas           | Data cleaning and manipulation    |
+| Matplotlib       | Exploratory data visualization    |
+| Power BI Desktop | Interactive dashboard development |
+| Kaggle           | Dataset source                    |
+| Git & GitHub     | Version control and collaboration |
 
 ---
 
+## Skills Demonstrated
+
+* Data Cleaning
+* Data Preprocessing
+* Exploratory Data Analysis (EDA)
+* Data Visualization
+* Dashboard Design
+* Power BI Reporting
+* Python Programming
+* Working with Real-World CSV Datasets
+
+---
+
+## Future Improvements
+
+* Add statistical analysis and hypothesis testing
+* Introduce interactive visualizations with Plotly
+* Build a Streamlit dashboard
+* Automate data refresh and reporting workflows
